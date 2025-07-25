@@ -14,7 +14,8 @@ function setup() {
   uiDiv = createDiv().style('float', 'left').style('margin-left', '20px');
 
   // Create canvas inside canvasDiv
-  let canvas = createCanvas(800, 800);
+  let canvasSize = min(windowWidth * 0.6, windowHeight * 0.8);
+  let canvas = createCanvas(canvasSize, canvasSize);
   canvas.parent(canvasDiv);
 
   // UI inside uiDiv

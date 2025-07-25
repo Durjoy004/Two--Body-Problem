@@ -1,0 +1,82 @@
+:root {
+  --bg-color: #0f0f0f;
+  --panel-color: #1e1e1e;
+  --text-color: #eee;
+  --accent: #00bcd4;
+  --button-bg: #00bcd4;
+  --button-hover: #0097a7;
+}
+
+body.light {
+  --bg-color: #ffffff;
+  --panel-color: #f4f4f4;
+  --text-color: #111;
+  --accent: #007bff;
+  --button-bg: #007bff;
+  --button-hover: #0056b3;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 30px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Canvas style */
+canvas {
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #222;
+  max-width: 100%;
+  height: auto;
+}
+
+/* UI Panel */
+div:not(#container) {
+  background-color: var(--panel-color);
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 250px;
+  box-shadow: 0 0 10px #111;
+  transition: background 0.3s;
+}
+
+p {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 16px;
+  accent-color: var(--accent);
+}
+
+/* Buttons */
+button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  background-color: var(--button-bg);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: block;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
